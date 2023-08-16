@@ -1,3 +1,6 @@
+#include "function_pointers.h"
+#include <stdio.h>
+#include <stlib.h>
 #include "3-calc.h"
 /**
  * main - check the cod.
