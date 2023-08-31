@@ -19,10 +19,10 @@ return (0);
 ui = 0;
 
 
-	for (len = 0; b[len] != '\0'; len++)
-	
+for (len = 0; b[len] != '\0'; len++)
 
-	
+
+
 for (len--, base_two = 1; len >= 0; len--, base_two *= 2)
 
 	{
