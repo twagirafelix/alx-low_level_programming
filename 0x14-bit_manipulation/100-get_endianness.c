@@ -5,15 +5,19 @@
  * Return: 0 if big endian, 1 if little endian
  */
 
-int get_endianness(void);
+int get_endianness(void)
 {
 
-unsigned int x = 1;
 
-char *c;
+int num;
 
-c = (char *)&x;
+num = 1;
+
+if (*(char *)&num == 1)
 
 
-return ((int)*c);
+return (1);
+else
+
+return (0);
 }

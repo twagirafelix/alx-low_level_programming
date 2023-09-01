@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * binary to converts a binary number to an
@@ -10,33 +11,29 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int ui;
-	int len, base_two;
+unsigned int base = 1, result = 0, len = 0;
 
-if (!b)
-return (0);
+	if (b == NULL)
 
-ui = 0;
+		return (0);
 
+	while (b[len])
 
-for (len = 0; b[len] != '\0'; len++)
+		len++;
 
-
-
-for (len--, base_two = 1; len >= 0; len--, base_two *= 2)
-
+	while (len)
 	{
-if (b[len] != '0' && b[len] != '1')
+		if (b[len - 1] != '0' && b[len - 1] != '1')
 
-		{
-return (0);
-		}
+			return (0);
 
-if (b[len] & 1)
-		{
-ui += base_two;
-		}
+		if (b[len - 1] == '1')
+
+			result += base;
+
+		base *= 2;
+
+		len--;
 	}
-
-	return (ui);
+	return (result);
 }
